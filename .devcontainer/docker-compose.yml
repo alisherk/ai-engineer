@@ -1,0 +1,16 @@
+version: '3.8'
+
+services:
+  ai-engineer-service:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - ..:/home/vscode/workspace:cached
+    command: sleep infinity
+    networks:
+      - ai-engineer-network
+
+networks:
+  ai-engineer-network:
+    driver: bridge
