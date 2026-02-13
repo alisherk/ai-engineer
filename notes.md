@@ -14,12 +14,10 @@
 
    here orchestrator is LLM that manages the workflow, while workers are specialized LLMs that handle specific sub-tasks. The synthesizer is responsible for aggregating the results from the workers and producing the final output.
 
-5. Evaluator-Optimizer: LLM output is validated by another LLM acting as an evaluator. The evaluator provides feedback to the original LLM, which can then optimize its output based on the feedback received.
+5. Evaluator-Optimizer: LLM output is validated by another LLM acting as an evaluator. The evaluator provides feedback to the original LLM,   which can then optimize its output based on the feedback received.
    Input -> LLM Generator -> LLM Evaluator (Optimization) -> Output
 
    here the LLM generates an initial output, which is then evaluated by the Evaluator. The Evaluator provides feedback on the quality of the output, and the LLM uses this feedback to optimize its response before producing the final output.
 
-
-# Agent design patterns
 
 
