@@ -1,4 +1,4 @@
-# Workflow design patterns 
+# Agentic worflow design patterns 
 
 1. Prompt chaining: The output of one prompt is used as the input for the next prompt. This allows for complex workflows to be built by chaining together multiple prompts.
 
