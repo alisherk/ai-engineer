@@ -1,6 +1,7 @@
 import asyncio
-
-from agents import Agent, Runner, trace
+from agents.tracing import trace
+from agents.run import Runner
+from agents.agent import Agent
 
 from src.app.settings import get_settings
 

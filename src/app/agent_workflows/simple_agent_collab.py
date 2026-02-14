@@ -1,7 +1,10 @@
 from typing import Dict
 import asyncio
 
-from agents import Agent, Runner, function_tool, trace
+from agents.agent import Agent
+from agents.run import Runner
+from agents.tool import function_tool
+from agents.tracing import trace
 from openai.types.responses import ResponseTextDeltaEvent
 
 from src.app.settings import get_settings
