@@ -3,9 +3,6 @@ from agents.tracing import trace
 from agents.run import Runner
 from agents.tool import WebSearchTool
 from agents.model_settings import ModelSettings
-from pydantic import BaseModel, Field
-import asyncio
-from typing import Dict
 
 from src.app.settings import get_settings
 
