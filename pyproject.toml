@@ -14,3 +14,6 @@ dependencies = [
     "pypdf>=6.7.0",
     "requests>=2.32.5",
 ]
+
+[project.scripts]
+run_crew = "src.app.crew_ai.debate.src.debate.main:run"
