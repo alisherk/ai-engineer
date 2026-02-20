@@ -1,3 +1,5 @@
+import asyncio
+
 from agents.agent import Agent
 from agents.tracing import trace
 from agents.run import Runner

@@ -110,7 +110,7 @@ async def run_agent_with_valid_extraction():
         result = await Runner.run(agent, markdown_input)
         print(f"\nFull output:\n{result.final_output.model_dump_json(indent=2)}")
     except ValidationError as e:
-        print(f"✗ Validation failed: {e}")
+        print(f"Validation failed: {e}")
 
 async def run_agent_with_invalid_extraction():
     print("\n" + "=" * 60)
@@ -119,13 +119,13 @@ async def run_agent_with_invalid_extraction():
 
     try:
         result = await Runner.run(agent, "# Complete Guide to Python")
-        print("✗ Validation didn't catch the error - unexpected!")
+        print("Validation didn't catch the error - unexpected!")
         print(result.final_output)
     except ValidationError as e:
-        print("✓ Validation correctly failed!")
+        print("Validation correctly failed!")
         print(f"Errors: {e.errors()}")
     except Exception as e:
         print(e)
-        print(f"✓ Agent framework caught the issue: {type(e).__name__}")
+        print(f"Agent framework caught the issue: {type(e).__name__}")
 
 asyncio.run(run_agent_with_valid_extraction())
