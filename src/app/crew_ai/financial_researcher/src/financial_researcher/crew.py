@@ -4,7 +4,7 @@ from crewai.project import CrewBase, agent, crew, task
 from crewai_tools import SerperDevTool
 
 @CrewBase
-class ResearchCrew():
+class FinancialResearcher():
     """Research crew for comprehensive topic analysis and reporting"""
 
     @agent
