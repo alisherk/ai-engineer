@@ -14,3 +14,6 @@ researcher-run:
 
 stock-picker-run:
 	export $$(cat .env | xargs) && cd src/app/crew_ai/stock_picker && uv run crewai run
+
+coder-run:
+	export $$(cat .env | xargs) && cd src/app/crew_ai/coder && uv run crewai run
