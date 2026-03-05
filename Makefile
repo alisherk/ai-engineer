@@ -5,6 +5,7 @@ help:
 	@echo "  make debater-run  - Run the CrewAI debate program"
 	@echo "  make researcher-run  - Run the CrewAI financial researcher program"
 	@echo "  make stock-picker-run  - Run the CrewAI stock picker program"
+	@echo "  make coder-run  - Run the CrewAI coder program"
 
 debater-run:
 	export $$(cat .env | xargs) && cd src/app/crew_ai/debate && uv run crewai run
@@ -17,3 +18,6 @@ stock-picker-run:
 
 coder-run:
 	export $$(cat .env | xargs) && cd src/app/crew_ai/coder && uv run crewai run
+
+eng-team-run:
+	export $$(cat .env | xargs) && cd src/app/crew_ai/eng_team && uv run crewai run
