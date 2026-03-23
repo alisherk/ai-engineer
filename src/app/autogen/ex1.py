@@ -44,7 +44,6 @@ def save_city_price(city_name, round_trip_price):
     conn.commit()
     conn.close()
 
-# Some cities!
 save_city_price("London", 299)
 save_city_price("Paris", 399)
 save_city_price("Rome", 499)
