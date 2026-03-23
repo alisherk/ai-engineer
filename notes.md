@@ -1,12 +1,6 @@
 
 # Agentic Workflow Design Patterns
 
-## Overview
-
-This document outlines common design patterns for building agentic AI workflows. These patterns help structure complex LLM-based systems by breaking down tasks, managing execution flow, and ensuring quality outputs. Each pattern addresses specific use cases and can be combined to create sophisticated AI applications.
-
----
-
 ## 1. Prompt Chaining
 
 ### Description
