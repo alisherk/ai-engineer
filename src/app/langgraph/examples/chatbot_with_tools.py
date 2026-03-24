@@ -5,7 +5,6 @@ import requests
 from langchain_community.utilities import GoogleSerperAPIWrapper
 from langchain_core.tools import Tool
 from langchain_openai import ChatOpenAI
-#from langgraph.checkpoint.memory import MemorySaver
 from langgraph.graph import END, START, StateGraph
 from langgraph.graph.message import add_messages
 from langgraph.prebuilt import ToolNode, tools_condition
@@ -13,11 +12,11 @@ from langgraph.checkpoint.sqlite import SqliteSaver
 from typing_extensions import Annotated
 import sqlite3
 from pathlib import Path
+#from langgraph.checkpoint.memory import MemorySaver
 
 from src.app.settings import get_settings
 
 settings = get_settings()
-
 
 serper = GoogleSerperAPIWrapper()
 tool_search = Tool(
@@ -43,6 +42,7 @@ tool_push = Tool(
     description="useful for when you want to send a push notification",
 )
 
+# lets give out chatbot access to tools
 tools = [tool_search, tool_push]
 
 # Step 1: Define state of the graph
@@ -74,7 +74,8 @@ graph_builder.add_edge(START, "chatbot")
 graph_builder.add_edge("chatbot", END)
 
 """
-can use different checkpointer implementations to store the state of the graph in different places. The MemorySaver will just store the state in memory, while the SqliteSaver will store the state in a sqlite database
+can use different checkpointer implementations to store the state of the graph in different places. 
+The MemorySaver will just store the state in memory, while the SqliteSaver will store the state in a sqlite database
 memory = MemorySaver()
 """
 

@@ -187,7 +187,7 @@ async def reset():
     return "", "", None, make_thread_id()
 
 with gr.Blocks(theme=gr.themes.Default(primary_hue="emerald")) as demo:
-    gr.Markdown("## Sidekick Personal Co-worker")
+    gr.Markdown("##Personal Co-worker")
     thread = gr.State(make_thread_id())
     
     with gr.Row():
