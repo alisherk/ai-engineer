@@ -10,6 +10,10 @@ class Settings(BaseSettings):
     pushover_user: str = ""
     pushover_token: str = ""
     pushover_api: str = "https://api.pushover.net/1/messages.json"
+    langsmith_tracing: str = ""
+    langsmith_endpoint: str = ""
+    langsmith_api_key: str = ""
+    langsmith_project: str = ""
 
     model_config = ConfigDict(env_file=".env", case_sensitive=False, extra="ignore")
 

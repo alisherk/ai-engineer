@@ -1,11 +1,17 @@
-.PHONY: debate-run help
+.PHONY: debate-run help install
 
 help:
 	@echo "Available commands:"
+	@echo "  make install         - Install all dependencies and Playwright browsers"
 	@echo "  make debater-run  - Run the CrewAI debate program"
 	@echo "  make researcher-run  - Run the CrewAI financial researcher program"
 	@echo "  make stock-picker-run  - Run the CrewAI stock picker program"
 	@echo "  make coder-run  - Run the CrewAI coder program"
+
+install:
+	uv sync
+	uv run playwright install chromium
+	uv run playwright install-deps chromium
 
 debater-run:
 	export $$(cat .env | xargs) && cd src/app/crew_ai/debate && uv run crewai run

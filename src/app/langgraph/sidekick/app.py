@@ -1,6 +1,9 @@
 import gradio as gr
-
 from src.app.langgraph.sidekick.sidekick import Sidekick
+
+from src.app.settings import get_settings
+
+settings = get_settings()
 
 
 async def setup():
